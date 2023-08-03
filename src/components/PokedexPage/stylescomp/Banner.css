@@ -1,0 +1,30 @@
+.banner__superior {
+
+}
+.bannerPoke-text {
+    margin-top: 0;
+    position: relative;
+    margin-left: 54px;
+    padding-top: 19px;
+    height: 57px;
+    width: 160px;
+}
+.banner1__poke {
+    height: 60px;
+    width: 100%;
+    flex-shrink: 0; 
+    background: #DD1A1A;
+}
+.banner2__poke {
+    margin-bottom: 0;
+    background: #0C0C0C;
+    height: 30px;
+}
+.bannerPoke-bola {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    bottom: 24px;
+    margin-left: auto;
+    margin-right: 50px;
+}

@@ -1,0 +1,191 @@
+.pokeIdcard {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 0.7em;
+    border: 0.1em solid #ccc;
+    cursor: pointer;
+    transition: transform 150ms ease;
+    margin-bottom: 30px;
+    position: relative;
+}
+pokeIdcard:hover {
+    transition: scale(1.03);
+}
+    .pokeIdcard__header {
+    position: relative;
+    background-color: #999;
+    aspect-ratio: 2;
+    position: relative;
+}
+
+.pokeIdcard__image {
+    position: absolute;
+    max-width: 100%;
+    top: 1.5em;
+    right: 0;
+    left: 0;
+    height: 251px;
+    object-fit: contain;
+}
+.pokeIdcard__name {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+.pokeIdcard__id__container {
+    text-align: center;
+}
+.pokeIdcard__id {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+.pokeIdcard__types__abilities {
+    display: flex;
+   gap: 15px;
+   justify-content: center;
+}
+.pokeIdcard__features {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.pokeIdcard__Wh {
+    margin-top: 0.1em;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+}
+.pokeIdcard__wh {
+    display: flex;
+    justify-content: center;
+    gap: 0.7em;
+    margin-bottom: 0.1em;
+}
+.pokeIdcard__Hg {
+    margin-top: 0.1em;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+}
+.pokeIdcard__hg {
+    display: flex;
+    justify-content: center;
+    gap: 0.7em;
+    margin-bottom: 0.1em;
+}
+.pokeIdcardtype {
+    margin-top: 0.1em;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+.pokeIdcard__types {
+    margin-bottom: 0.1em;
+}
+
+.pokeIdcard__typename__container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.pokeIdcard__typename {
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+}
+
+.pokeIdcar__prop {
+    margin-top: 0.1em;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+.pokeIdcard__abilities {
+    margin-bottom: 0.1em;
+}
+.pokeIdcard__abilities__container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.pokeIdcard__abilities__item {
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+.pokeIdcard__value {
+    margin-bottom: 0.1em;
+    justify-content: left;
+}
+.pokeIdcard__h4 {
+    margin-top: 0.1em;
+    font-size: 2em;
+    display: flex;
+    justify-content: left;
+    padding: 15px;
+}
+.pokeIdcard__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1.5em 0.2em;
+}
+
+.pokeIdcard__stat {
+    display: grid;
+    gap: 0.5em;
+    justify-items: center;
+}
+
+.pokeIdcard__stat__name {
+    font-size: 0.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.pokeIdcard__stat__value {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.pokeIdcard__abilitiesname {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+}
+
+.pokeIdmove__card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0.7em;
+    border: 0.1em solid #ccc;
+    cursor: pointer;
+    transition: transform 150ms ease;
+    margin-top: 50px;
+}
+.pokeIdcard__moves {
+    padding: 15px;
+    font-size: 1.7rem;
+}
+
+.pokeIdcard__moves__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pokeIdcard__moves__item {
+    background: #E5E5E5;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
