@@ -5,6 +5,7 @@ import PokeCard from "../components/PokedexPage/PokeCard"
 import SelectType from "../components/PokedexPage/SelectType"
 import './stylepages/PokedexPage.css'
 import Banner from '../components/Pokebanner/Banner'
+import Paginations from "./Paginations"
 
 
 
@@ -17,8 +18,12 @@ const PokedexPage = () => {
 
   const trainer = useSelector(reducer => reducer.trainer)
 
-  const url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=10'
+  const url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=1500'
   const [pokemons, getAllPokemons, getPokemonsByType] = useFetch(url)
+
+  const cbFilter = poke => poke.name.includes(inputValue)
+
+  const allPokemons = pokemons?.results.filter(cbFilter);
 
   useEffect(() => {
     if (selectValue === 'allPokemons') {
@@ -37,7 +42,12 @@ const PokedexPage = () => {
     setInputValue(inputSearch.current.value.trim().toLowerCase())
   }
 
-  const cbFilter = poke => poke.name.includes(inputValue)
+  const [ page, setPage ] = useState(1);
+
+  const pokePerPage = 5;
+  const lastPokeIndex = page * pokePerPage;
+  const firstPokeIndex = lastPokeIndex - pokePerPage;
+  const paginatedPokemons = allPokemons?.slice(firstPokeIndex, lastPokeIndex);
 
   return (
     <>
@@ -53,7 +63,7 @@ const PokedexPage = () => {
         </div>
         <div className="pokex__filter">
           {
-            pokemons?.results.filter(cbFilter).map(poke => (
+            paginatedPokemons?.map(poke => (
               <PokeCard
                 key={poke.url}
                 url={poke.url}
@@ -62,6 +72,7 @@ const PokedexPage = () => {
           }
         </div>
       </div>
+      <Paginations pokePerPage={pokePerPage} currentPage={page} totalPoke={allPokemons?.length} paginate={number => setPage(number)} />
     </>
   )
 }

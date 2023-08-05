@@ -4,7 +4,9 @@
 
 }
 .pokex__filter {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 .pokex__Welc {
     color: #FE1936;
